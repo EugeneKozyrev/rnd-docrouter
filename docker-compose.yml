@@ -10,6 +10,10 @@ services:
       - .env
     environment:
       PYTHONUNBUFFERED: '1'
+      TIKA_URL: 'http://tika:9998/tika'
+      VLM_API_KEY: ''
+      VLM_API_URL: 'https://api.gpt.mws.ru/v1'
+      VLM_DEFAULT_MODEL: 'qwen3-coder-480b-a35b'
     ports:
       - '8000:8000'
     healthcheck:
