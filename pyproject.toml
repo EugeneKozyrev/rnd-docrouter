@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rnd-mrap"
+version = "0.2.0"
+description = ""
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[all]",
+    "uvicorn[standard]",
+    "ruff",
+    "mypy",
+    "requests",
+    "python-multipart",
+    "types-requests",
+    "types-urllib3",
+    "requests",
+    "PyMuPDF",
+]
+
+[project.optional-dependencies]
+dev = []
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
